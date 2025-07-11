@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marquez's Portfolio Website</title>
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/176e6659-52a3-43a9-b768-d67531548aa8/a390dcbd-5f52-44e8-9b5f-98e02089f0a1.png?v=1748734415898"
+      type="image/png"
+      sizes="512x512"
+    />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Hamburger Navigation -->
+    <button class="hamburger-menu" aria-label="Navigation Menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </button>
+
+    <!-- Side Navigation -->
+    <nav class="slide-nav" aria-label="Main Navigation">
+      <ul>
+        <li><a href="#page1">Home</a></li>
+        <li><a href="#page2">About</a></li>
+        <li><a href="#page-project">Projects</a></li>
+        <li><a href="#page4">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Page 1: Landing -->
+      <section class="page" id="page1" aria-label="Welcome Section">
+        <div class="canvas-wrapper">
+          <canvas id="star-canvas" aria-hidden="true"></canvas>
+        </div>
+        <div class="landing-content">
+          <h1 class="landing-title">Welcome to My Space on the Web</h1>
+          <div class="static-text">
+            <div class="landing-intro">Hi, I’m Marquez —</div>
+          </div>
+          <div class="landing-subtitle fade-words-wrapper">
+            <span class="word active">get to know what I create</span>
+            <span class="word">explore how I think</span>
+            <span class="word">discover where I’m going</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Page 2: About -->
+      <section class="page" id="page2" aria-label="About Me Section">
+        <!-- ✅ Background Shapes — move outside content wrapper -->
+        <div class="about-bg-shapes" aria-hidden="true">
+          <svg class="shape shape-1" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="100" fill="#1e90ff" opacity="0.08" />
+          </svg>
+          <svg class="shape shape-2" viewBox="0 0 200 200">
+            <rect width="200" height="200" fill="#1e90ff" opacity="0.05" />
+          </svg>
+          <!-- Extra shapes for outer corners -->
+          <svg class="shape shape-3" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="100" fill="#1e90ff" opacity="0.04" />
+          </svg>
+
+          <svg class="shape shape-4" viewBox="0 0 200 200">
+            <polygon points="0,0 200,0 200,200" fill="#1e90ff" opacity="0.03" />
+          </svg>
+
+          <svg class="shape shape-5" viewBox="0 0 200 200">
+            <rect width="200" height="200" fill="#1e90ff" opacity="0.02" />
+          </svg>
+        </div>
+
+        <!-- ✅ Main About Content -->
+        <div class="about-section-inner">
+          <h2 class="about-heading">A Little About Me</h2>
+
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                I thrive in
+                <span class="accent">collaborative environments</span> where I
+                can work closely with designers, product managers, and fellow
+                developers to create innovative,
+                <span class="accent">user-focused solutions</span>. Whether it's
+                collaborating on a web design project, building interactive
+                prototypes, or integrating complex systems, I excel in taking a
+                <span class="accent">hands-on approach</span> to problem-solving
+                and ensuring seamless communication across teams. In one of my
+                recent projects, I collaborated with a diverse team to design
+                and develop a
+                <span class="accent">modern, interactive product</span>, using
+                <strong>HTML</strong>, <strong>CSS</strong>,
+                <strong>JavaScript</strong>, and <strong>JSON</strong> to bring
+                ideas to life while staying focused on
+                <span class="accent">user experience</span> and accessibility. I
+                believe in fostering an open, communicative environment where
+                <span class="accent">creativity</span> and
+                <span class="accent">problem-solving</span> thrive, and I’m
+                driven to deliver high-quality results that exceed expectations.
+                Whether facing tight deadlines or complex challenges, my
+                commitment to innovation helps me consistently contribute to
+                successful outcomes.
+              </p>
+            </div>
+
+            <div class="about-image fade-in-on-scroll">
+              <img
+                src="https://cdn.glitch.global/176e6659-52a3-43a9-b768-d67531548aa8/DSC_0730.jpg?v=1747692493421"
+                alt="Portrait of Marquez Johnson"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Page 2.5: Current Project Highlight -->
+      <section
+        id="page-current"
+        class="page"
+        aria-label="Current Project Section"
+      >
+        <div class="current-title-wrapper">
+          <h2>What I'm Currently Working On</h2>
+        </div>
+
+        <div class="current-project-wrapper">
+          <div class="current-project-content">
+            <div class="current-project-text">
+              <p>
+                I’m developing an interactive virtual consultation tool using
+                augmented reality (AR) to enhance how doctors explain diagnoses
+                to patients remotely. The platform enables shared 3D exploration
+                of the human body with labeled anatomy,
+                <strong
+                  >replacing the limitations of traditional virtual
+                  calls</strong
+                >.
+              </p>
+              <p>
+                This project addresses a key problem in telemedicine: the
+                disconnect between patients and doctors during virtual
+                appointments. By introducing an
+                <span class="accent">immersive</span>, engaging experience, the
+                tool improves understanding and
+                <strong>patient trust</strong> through intuitive visuals and
+                clear explanations.
+              </p>
+              <p>
+                I'm using <span class="accent">Figma</span> to prototype both
+                the patient and doctor interfaces, simulating how
+                <span class="accent">real-time interactions</span> and medical
+                visualizations will appear on screen. Although in early
+                development, this concept has strong potential to transform
+                remote healthcare experiences by making them more informative,
+                accessible, and engaging.
+              </p>
+            </div>
+
+            <div class="image-button-wrapper">
+              <img
+                src="https://cdn.glitch.global/176e6659-52a3-43a9-b768-d67531548aa8/Screenshot%202025-05-31%20at%208.13.39%E2%80%AFAM.png?v=1748693632744"
+                alt="Preview of AR healthcare consultation tool"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Page 3: Projects -->
+      <section
+        class="project-page page"
+        id="page-project"
+        aria-label="Projects Section"
+      >
+        <!-- ✅ Tech-Inspired Subtle Shapes -->
+        <div class="project-bg-shapes" aria-hidden="true">
+          <!-- Hexagon -->
+          <svg class="shape hex" viewBox="0 0 100 100">
+            <polygon points="50,0 100,25 100,75 50,100 0,75 0,25" />
+          </svg>
+
+          <!-- Dotted Grid -->
+          <svg class="shape grid" viewBox="0 0 100 100">
+            <defs>
+              <pattern
+                id="dotPattern"
+                x="0"
+                y="0"
+                width="10"
+                height="10"
+                patternUnits="userSpaceOnUse"
+              >
+                <circle cx="1" cy="1" r="1" fill="#1e90ff" />
+              </pattern>
+            </defs>
+            <rect width="100" height="100" fill="url(#dotPattern)" />
+          </svg>
+        </div>
+
+        <!-- ✅ Main Project Content -->
+        <div class="project-content">
+          <div class="project-slider">
+            <!-- Slide 1 -->
+            <div class="slide active">
+              <div class="project-card">
+                <div class="project-slide-content">
+                  <div class="project-text">
+                    <h2>PeachHacks Hackathon Design Project</h2>
+                    <p>
+                      A team of peers and I redesigned and modernized the iPod
+                      for the PeachHacks Hackathon Project. We created mockups
+                      and an interactive prototype in
+                      <a
+                        href="https://www.figma.com/design/kvWeAkzhdI9ZpvXOXEsxht/PeachHacks--PodPal?node-id=0-1&m=dev"
+                        target="_blank"
+                        class="figma-link"
+                        >Figma</a
+                      >, incorporating user feedback and usability testing to
+                      guide visual design and product decisions. We presented
+                      our research and findings for our product using
+                      <a
+                        href="https://www.canva.com/design/DAGkRdDicis/FaXM2qNnXQvaH6dZQtxvyQ/edit"
+                        target="_blank"
+                        class="canva-link"
+                        >Canva</a
+                      >. We implemented a voice-controlled prototype using Java,
+                      CSS, JSON, and HTML—prioritizing accessibility using
+                      <a
+                        href="https://danielleahenry.github.io/auri/"
+                        target="_blank"
+                        class="github-link"
+                        >GitHub</a
+                      >. We created our vision and executed the plan in two
+                      days.
+                    </p>
+                  </div>
+                  <div class="project-image">
+                    <div class="image-button-wrapper">
+                      <img
+                        src="https://cdn.glitch.global/176e6659-52a3-43a9-b768-d67531548aa8/Screenshot%202025-05-27%20at%2010.41.14%E2%80%AFAM.png?v=1748356877828"
+                        alt="Preview of PeachHacks Hackathon project"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="arrow-button next-slide-btn"
+                    aria-label="Next Slide"
+                  >
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+              <div class="project-card">
+                <div class="project-slide-content">
+                  <button
+                    class="arrow-button back-slide-btn"
+                    aria-label="Previous Slide"
+                  >
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <div class="project-text">
+                    <h2>Club Chatbot | Web & UX Design Project</h2>
+                    <p>
+                      I created an interactive
+                      <span class="accent">GSU chatbot</span> that helps
+                      students find university clubs aligned with their
+                      interests. The prototype features intuitive navigation and
+                      <strong>clear user flows</strong>. Using JavaScript, CSS,
+                      and the OpenAI API, I built a real-time conversation
+                      system. After <strong>user testing</strong>, I refined the
+                      layout, content, and implemented error handling for better
+                      usability.
+                    </p>
+                  </div>
+                  <div class="project-image">
+                    <div class="image-button-wrapper">
+                      <img
+                        src="https://cdn.glitch.global/176e6659-52a3-43a9-b768-d67531548aa8/Screenshot%202025-05-27%20at%2010.41.32%E2%80%AFAM.png?v=1748356895947"
+                        alt="Preview of Club Chatbot project"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="arrow-button next-slide-btn"
+                    aria-label="Next Slide"
+                  >
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+              <div class="project-card">
+                <div class="project-slide-content">
+                  <button
+                    class="arrow-button back-slide-btn"
+                    aria-label="Previous Slide"
+                  >
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <div class="project-text">
+                    <h2>Clothing Brand Website | UX/UI Contract</h2>
+                    <p>
+                      I developed a launch website for a local clothing brand
+                      using Liquid, prioritizing modern design, intuitive
+                      navigation, and secure backend functionality. The site was
+                      tailored to reflect the brand’s identity while ensuring a
+                      <strong>seamless user experience across devices </strong>.
+                      In addition, I implemented automated SMS and email
+                      marketing campaigns using Klaviyo, leveraging
+                      <span class="accent">AI-powered workflows</span> to
+                      personalize communication, improve customer retention, and
+                      drive conversions. These efforts were supported by
+                      integrated analytics that enabled the team to
+                      <strong>track user behavior </strong>strong>, measure
+                      campaign performance, and
+                      <span class="accent">make data-informed decisions</span>
+                      that supported sustained growth.
+                    </p>
+                  </div>
+                  <div class="project-image">
+                    <div class="image-button-wrapper">
+                      <img
+                        src="https://cdn.glitch.global/176e6659-52a3-43a9-b768-d67531548aa8/d7dfe9cf-c4c8-4a8a-8808-fe5854c7804a.png?v=1748574715073"
+                        alt="Preview of Clothing Brand website"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Page 4: Contact -->
+      <section class="page" id="page4" aria-label="Contact Section">
+        <canvas id="firefly-canvas" aria-hidden="true"></canvas>
+        <!-- 🔹 ADDED LINE -->
+
+        <div class="contact-content">
+          <h2 class="contact-heading">Let’s keep in...</h2>
+          <div class="fade-words-wrapper">
+            <span class="word active">touch!</span>
+            <span class="word">contact!</span>
+            <span class="word">communication!</span>
+          </div>
+          <div class="contact-buttons">
+            <div class="scale-wrapper">
+              <div class="phone-container">
+                <button
+                  class="contact-btn phone"
+                  id="phone-button"
+                  aria-label="Show Phone Number"
+                >
+                  <i class="fas fa-phone"></i>
+                </button>
+                <div class="phone-number" id="phone-number">770-365-5853</div>
+              </div>
+            </div>
+            <div class="scale-wrapper">
+              <div class="email-container">
+                <button
+                  class="contact-btn email"
+                  id="email-button"
+                  aria-label="Show Email Address"
+                >
+                  <i class="fas fa-envelope"></i>
+                </button>
+                <div class="email-address" id="email-address">
+                  quezusg11@gmail.com
+                </div>
+              </div>
+            </div>
+            <div class="scale-wrapper">
+              <div class="phone-container">
+                <a
+                  class="contact-btn linkedin"
+                  href="https://www.linkedin.com/in/marquez-johnson/"
+                  target="_blank"
+                  aria-label="LinkedIn Profile"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+            <!-- Add GitHub Button -->
+            <div class="scale-wrapper">
+              <div class="phone-container">
+                <a
+                  class="contact-btn github"
+                  href="https://github.com/Marquez03Johnson"
+                  target="_blank"
+                  aria-label="GitHub Profile"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
